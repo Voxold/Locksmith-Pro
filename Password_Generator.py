@@ -1,7 +1,7 @@
 import random
 import string
 
-def generate_password(length=222, uppercase=True, lowercase=True, digits=True, symbols=False):
+def generate_password(length=True, uppercase=True, lowercase=True, digits=True, symbols=False):
     """
     Generate a random password.
 
@@ -15,7 +15,7 @@ def generate_password(length=222, uppercase=True, lowercase=True, digits=True, s
     Returns:
     - password (str): Randomly generated password
     """
-    
+    length = int(input('Please choose length of your password : '))
     # Define character sets based on parameters
     chars = ''
     if uppercase:
@@ -31,11 +31,12 @@ def generate_password(length=222, uppercase=True, lowercase=True, digits=True, s
     password = ''.join(random.choice(chars) for _ in range(length))
     return password
 
-# Example usage:
-# Generate a password with default settings
-default_password = generate_password()
-print("Default password:", default_password)
+if __name__ == "__main__":
+    # Example usage:
+    # Generate a password with default settings
+    default_password = generate_password()
+    print("Default password:", default_password)
 
-# Generate a password with specific criteria
-custom_password = generate_password(length=16, symbols=True)
-print("Custom password:", custom_password)
+    # Generate a password with specific criteria
+    custom_password = generate_password(length=16, symbols=True)
+    print("Custom password:", custom_password)
