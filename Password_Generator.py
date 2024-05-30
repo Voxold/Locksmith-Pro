@@ -35,5 +35,6 @@ def generate_password(length=0, uppercase=False, lowercase=False, digits=False, 
 
 if __name__ == "__main__":
     # Generate a password with specific criteria
-    custom_password = generate_password(length=16, uppercase=True, lowercase=True, digits=True, symbols=True)
+    
+    custom_password = generate_password(uppercase=True, lowercase=True, digits=True, symbols=True)
     print("Custom password:", custom_password)
