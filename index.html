@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locksmith Pro</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <form id="passwordForm">
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" name="length" min="1" required><br><br>
+
+        <input type="checkbox" id="uppercase" name="uppercase">
+        <label for="uppercase">Include Uppercase Letters</label><br>
+
+        <input type="checkbox" id="lowercase" name="lowercase">
+        <label for="lowercase">Include Lowercase Letters</label><br>
+
+        <input type="checkbox" id="digits" name="digits">
+        <label for="digits">Include Digits</label><br>
+
+        <input type="checkbox" id="symbols" name="symbols">
+        <label for="symbols">Include Symbols</label><br><br>
+
+        <button type="button" onclick="generatePassword()">Generate Password</button>
+    </form>
+
+    <h2>Generated Password:</h2>
+    <p id="result"></p>
+
+    <script src="/main.js"></script>
+</body>
+</html>
