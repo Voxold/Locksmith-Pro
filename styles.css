@@ -1,7 +1,30 @@
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #181818;
     justify-content: center;
     align-items: center;
     color: #fff;
+}
+
+#passwordForm {
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 70%;
+    height: auto;
+    padding: 5rem;
+    border: 2px solid orangered;
+    border-radius: 20px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    border: 2px orangered solid;
+    border-radius: 20px;
+    padding: 2rem;
 }
 
