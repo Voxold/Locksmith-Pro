@@ -5,16 +5,17 @@ Locksmith Pro is a powerful and intuitive password generation website designed t
 ## Team Members
 <table>
     <tr>
+        <th>❖ Bilal Ajaha</th>
         <td>
-            <h4>❖ Bilal Ajaha</h4>
+            <h4>
             <a href="https://skillicons.dev">
                 <a href="https://github.com/Voxold"><img src="https://skillicons.dev/icons?i=github" width='40px' height='40px'/></a>
                 <a href="https://www.linkedin.com/in/voxold/"><img src="https://skillicons.dev/icons?i=linkedin" width='40px' height='40px'/></a>
                 <a href="https://twitter.com/bilal_ajaha"><img src="https://skillicons.dev/icons?i=twitter" width='40px' height='40px'/></a>
             </a>
         </td>
+        <th>❖ Ahmed Morgan<br</th>
         <td>
-            <h4>❖ Ahmed Morgan<br></h4>
             <a href="https://skillicons.dev">
                 <a href="https://github.com/Voxold"><img src="https://skillicons.dev/icons?i=github" width='40px' height='40px'/></a>
                 <a href="https://www.linkedin.com/in/voxold/"><img src="https://skillicons.dev/icons?i=linkedin" width='40px' height='40px'/></a>
