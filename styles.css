@@ -134,6 +134,12 @@ body {
     font-weight: 300;
 }
 
-.copyright p .copy {
+.copyright p a {
     color: #00E7EF;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.copyright p a:hover{
+    color: #fff;
 }
