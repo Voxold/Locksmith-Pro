@@ -6,6 +6,9 @@ Locksmith Pro is a powerful and intuitive password generation website designed t
 <table>
     <tr>
         <th>❖ Bilal Ajaha</th>
+        <th>❖ Ahmed Morgan<br</th>
+    </tr>
+    <tr>
         <td>
             <h4>
             <a href="https://skillicons.dev">
@@ -14,7 +17,6 @@ Locksmith Pro is a powerful and intuitive password generation website designed t
                 <a href="https://twitter.com/bilal_ajaha"><img src="https://skillicons.dev/icons?i=twitter" width='40px' height='40px'/></a>
             </a>
         </td>
-        <th>❖ Ahmed Morgan<br</th>
         <td>
             <a href="https://skillicons.dev">
                 <a href="https://github.com/Voxold"><img src="https://skillicons.dev/icons?i=github" width='40px' height='40px'/></a>
