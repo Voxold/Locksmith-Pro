@@ -116,16 +116,6 @@ body {
     background-color: #181818;
 }
 
-#result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    border: 2px #00E7EF solid;
-    border-radius: 20px;
-    padding: 2rem;
-}
-
 h1{
     font-family: Poppies, sans-serif;
     font-weight: 800;
@@ -138,10 +128,16 @@ h2{
     font-size: 40px;
 }
 
-p{
-    font-family: Poppies, sans-serif;
-    font-weight: 400;
-    font-size: 30px;
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 200;
+    border: 2px #00E7EF solid;
+    border-radius: 20px;
+    padding: 2rem;
+    font-family: Poppies;
 }
 
 /*____ Footer ____*/
