@@ -53,6 +53,7 @@ body {
     padding: 5rem;
     border: 2px solid #00E7EF;
     border-radius: 20px;
+    font-family: Poppies, sans-serif;
 }
 
 
@@ -66,7 +67,23 @@ body {
     padding: 2rem;
 }
 
+h1{
+    font-family: Poppies, sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+}
 
+h2{
+    font-family: Poppies, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+p{
+    font-family: Poppies, sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
 /*____ Footer ____*/
 .footer{
     display: flex;
