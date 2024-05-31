@@ -71,9 +71,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: auto;
-    border: solid 2px orangered;
+    margin: 0 1rem;
+    width: 90%;
 }
 
 .footer #logo{
