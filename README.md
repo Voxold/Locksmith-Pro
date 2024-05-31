@@ -9,13 +9,13 @@ Locksmith Pro is a powerful and intuitive password generation website designed t
     <a href="https://github.com/Voxold"><img src="https://skillicons.dev/icons?i=github" width='40px' height='40px'/></a>
     <a href="https://www.linkedin.com/in/voxold/"><img src="https://skillicons.dev/icons?i=linkedin" width='40px' height='40px'/></a>
     <a href="https://twitter.com/bilal_ajaha"><img src="https://skillicons.dev/icons?i=twitter" width='40px' height='40px'/></a>
-  </a><br>
+</a><br>
 <h4>❖ Ahmed Morgan<br></h4>
 <a href="https://skillicons.dev">
     <a href="https://github.com"><img src="https://skillicons.dev/icons?i=github" width='40px' height='40px'/></a>
     <a href="https://www.linkedin.com"><img src="https://skillicons.dev/icons?i=linkedin" width='40px' height='40px'/></a>
     <a href="https://twitter.com"><img src="https://skillicons.dev/icons?i=twitter" width='40px' height='40px'/></a>
-  </a>
+</a>
 
 ## Technologies
 
