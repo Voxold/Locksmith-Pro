@@ -28,3 +28,18 @@ body {
     padding: 2rem;
 }
 
+
+/*____ Footer ____*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: solid 2px orangered;
+}
+
+.footer #logo{
+    width: 250px;
+    cursor: pointer;
+}
