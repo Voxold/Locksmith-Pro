@@ -51,16 +51,17 @@ body {
     width: 70%;
     height: auto;
     padding: 5rem;
-    border: 2px solid orangered;
+    border: 2px solid #00E7EF;
     border-radius: 20px;
 }
+
 
 #result {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
-    border: 2px orangered solid;
+    border: 2px #00E7EF solid;
     border-radius: 20px;
     padding: 2rem;
 }
@@ -88,26 +89,51 @@ body {
     width: 60%;
 }
 
-.footer-menu .info{
-    display: flex;
-    flex-direction: column;
+.footer-menu .links {
+    width: 100%;
     font-size: 18px;
     color: #00E7EF;
     font-weight: 600;
     font-family: Poppies, sans-serif;
-
 }
 
-.footer .footer-menu a {
+
+.footer-menu .info{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.footer .footer-menu .links .info a {
     margin-right: 25px;
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     font-family: Poppins, sans-serif;
     font-weight: 300;
     text-decoration: none;
     transition: .4s;
+    margin: 10px 0;
 }
 
-.footer .footer-menu a:hover{
+.footer .footer-menu .links .info a:hover{
+    color: #00E7EF;
+}
+
+.copyright{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright p {
+    font-size: 16px;
+    font-family: Poppies, sans-serif;
+    font-weight: 300;
+}
+
+.copyright p .copy {
     color: #00E7EF;
 }
