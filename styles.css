@@ -70,6 +70,8 @@ body {
 }
 
 #passwordForm {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #181818;
@@ -79,7 +81,17 @@ body {
     border: 2px solid #00E7EF;
     border-radius: 20px;
     font-family: Poppies, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 231, 239, 1);
 }
+
+#passwordForm .choices {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    font-size: 18px;
+    font-weight: 300;
+}
+
 
 
 #result {
@@ -109,6 +121,27 @@ p{
     font-weight: 400;
     font-size: 30px;
 }
+
+.button {
+    width: 10rem;
+    height: 3rem;
+    background-color: #00E7EF;
+    color: #181818;
+    font-family: Poppies, sans-serif;
+    font-weight: 500;
+    overflow: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    border: 1.5px solid #00E7EF;
+    color: #00E7EF;
+    background-color: #181818;
+}
+
+
 /*____ Footer ____*/
 .footer{
     display: flex;
