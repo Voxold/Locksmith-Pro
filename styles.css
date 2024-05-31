@@ -9,6 +9,8 @@ body {
     color: #fff;
 }
 
+
+
 /*____ Header ____*/
 .header{
     display: flex;
@@ -16,6 +18,7 @@ body {
     align-items: center;
     margin: 0 1rem;
     width: 90%;
+    height: 8rem;
 }
 
 .header img{
@@ -44,10 +47,32 @@ body {
 
 
 /*____ Main ____*/
+.main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main::after{
+    content: '';
+    background: #181818;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .1;
+    background: url(/Locksmith-Pro/img/background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 #passwordForm {
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #181818;
     width: 70%;
     height: auto;
     padding: 5rem;
