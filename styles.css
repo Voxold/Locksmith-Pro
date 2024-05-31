@@ -91,5 +91,23 @@ body {
 .footer-menu .info{
     display: flex;
     flex-direction: column;
+    font-size: 18px;
+    color: #00E7EF;
+    font-weight: 600;
+    font-family: Poppies, sans-serif;
 
+}
+
+.footer .footer-menu a {
+    margin-right: 25px;
+    color: #fff;
+    font-size: 15px;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.footer .footer-menu a:hover{
+    color: #00E7EF;
 }
