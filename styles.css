@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -7,6 +9,41 @@ body {
     color: #fff;
 }
 
+/*____ Header ____*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+    width: 90%;
+}
+
+.header img{
+    width: 230px;
+}
+
+.header .header-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.header .header-menu a {
+    margin-right: 25px;
+    color: #fff;
+    font-size: 17px;
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.header .header-menu a:hover{
+    color: #00E7EF;
+}
+
+
+/*____ Main ____*/
 #passwordForm {
     justify-content: center;
     align-items: center;
@@ -42,4 +79,18 @@ body {
 .footer #logo{
     width: 250px;
     cursor: pointer;
+}
+
+.footer-menu{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    grid-row: 20px;
+    width: 60%;
+}
+
+.footer-menu .info{
+    display: flex;
+    flex-direction: column;
+
 }
