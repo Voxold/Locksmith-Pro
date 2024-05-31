@@ -82,6 +82,7 @@ body {
     border-radius: 20px;
     font-family: Poppies, sans-serif;
     box-shadow: 0 0 20px rgba(0, 231, 239, 1);
+    grid-gap: 40px;
 }
 
 #passwordForm .choices {
@@ -92,7 +93,29 @@ body {
     font-weight: 300;
 }
 
+#passwordForm .length {
+    font-size: 22px;
+}
 
+.button {
+    width: 14rem;
+    height: 3rem;
+    background-color: #00E7EF;
+    color: #181818;
+    font-family: Poppies, sans-serif;
+    font-weight: 500;
+    overflow: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.button:hover{
+    border: 1.5px solid #00E7EF;
+    color: #00E7EF;
+    background-color: #181818;
+}
 
 #result {
     display: flex;
@@ -121,26 +144,6 @@ p{
     font-weight: 400;
     font-size: 30px;
 }
-
-.button {
-    width: 10rem;
-    height: 3rem;
-    background-color: #00E7EF;
-    color: #181818;
-    font-family: Poppies, sans-serif;
-    font-weight: 500;
-    overflow: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover{
-    border: 1.5px solid #00E7EF;
-    color: #00E7EF;
-    background-color: #181818;
-}
-
 
 /*____ Footer ____*/
 .footer{
