@@ -24,6 +24,13 @@
     <section class="main">
         <h1>Password Generator</h1>
         <form id="passwordForm">
+            <div class="generated-password">
+                <h2>Generated Password:</h2>
+                <nav class="generated-password-nav">
+                    <p id="result"></p>
+                </nav>
+            </div>
+            
             <nav class="choices">
                 <input type="checkbox" id="uppercase" name="uppercase" class="checkbox">
                 <label for="uppercase">Include Uppercase Letters</label><br>
@@ -46,9 +53,6 @@
             <button type="button" onclick="generatePassword()" class="button">Generate Password</button>
         </form>
 
-        <h2>Generated Password:</h2>
-
-        <p id="result"></p>
     </section>
     
 

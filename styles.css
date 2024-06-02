@@ -3,7 +3,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #181818;
+    background-color: black;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -58,12 +58,12 @@ body {
 
 .main::after{
     content: '';
-    background: #181818;
+    background: black;
     position: absolute;
     inset: 0;
     z-index: -1;
-    opacity: .1;
-    background: url(/Locksmith-Pro/img/background.png) no-repeat;
+    opacity: .5;
+    background: url(/img/background.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -76,13 +76,46 @@ body {
     background-color: #181818;
     width: 70%;
     height: auto;
-    padding: 5rem;
+    padding: 3rem 5rem;
     border: 2px solid #00E7EF;
     border-radius: 20px;
     font-family: Poppies, sans-serif;
     box-shadow: 0 0 20px rgba(0, 231, 239, 1);
     grid-gap: 40px;
+    margin-bottom: 5rem;
 }
+
+.generated-password{
+    width: 80%;
+}
+
+.generated-password h2{
+    font-family: Poppies, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.generated-password-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border: 5px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Poppies, sans-serif;
+    color: black;
+}
+
 
 #passwordForm .choices {
     display: flex;
@@ -120,24 +153,6 @@ h1{
     font-family: Poppies, sans-serif;
     font-weight: 800;
     font-size: 50px;
-}
-
-h2{
-    font-family: Poppies, sans-serif;
-    font-weight: 600;
-    font-size: 40px;
-}
-
-#result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    font-weight: 200;
-    border: 2px #00E7EF solid;
-    border-radius: 20px;
-    padding: 2rem;
-    font-family: Poppies;
 }
 
 /*____ Footer ____*/
