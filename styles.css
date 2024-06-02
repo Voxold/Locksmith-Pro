@@ -80,7 +80,7 @@ body {
     height: auto;
     padding: 3rem 5rem;
     border: 2px solid #00E7EF;
-    border-radius: 20px;
+    border-radius: 5px;
     font-family: Poppins, sans-serif;
     box-shadow: 0 0 20px rgba(0, 231, 239, 1);
     grid-gap: 40px;
