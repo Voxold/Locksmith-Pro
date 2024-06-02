@@ -112,10 +112,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 400;
     font-family: Poppins, sans-serif;
-    color: black;
+    color: #181818;
 }
 
 
