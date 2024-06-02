@@ -1,3 +1,7 @@
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    document.querySelector('.nav-list').classList.toggle('active');
+});
+
 function generatePassword() {
     const length = parseInt(document.getElementById('length').value);
     const uppercase = document.getElementById('uppercase').checked;
@@ -24,3 +28,4 @@ function generatePassword() {
 
     document.getElementById('result').innerText = password;
 }
+
