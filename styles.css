@@ -17,7 +17,8 @@ body {
     align-items: center;
     margin: 0 1rem;
     width: 90%;
-    height: 8rem;
+    height: 10rem;
+    margin-bottom: 2rem;
 }
 
 .header img{
@@ -32,9 +33,9 @@ body {
 }
 
 .header .header-menu a {
-    margin-right: 25px;
+    margin-right: 35px;
     color: #fff;
-    font-size: 17px;
+    font-size: 16px;
     font-family: Poppins, sans-serif;
     text-decoration: none;
     transition: .4s;
@@ -54,6 +55,7 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .main::after{
@@ -79,7 +81,7 @@ body {
     padding: 3rem 5rem;
     border: 2px solid #00E7EF;
     border-radius: 20px;
-    font-family: Poppies, sans-serif;
+    font-family: Poppins, sans-serif;
     box-shadow: 0 0 20px rgba(0, 231, 239, 1);
     grid-gap: 40px;
     margin-bottom: 5rem;
@@ -90,7 +92,7 @@ body {
 }
 
 .generated-password h2{
-    font-family: Poppies, sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 600;
     font-size: 20px;
 }
@@ -112,7 +114,7 @@ body {
     align-items: center;
     font-size: 25px;
     font-weight: 500;
-    font-family: Poppies, sans-serif;
+    font-family: Poppins, sans-serif;
     color: black;
 }
 
@@ -150,11 +152,17 @@ body {
 }
 
 h1{
-    font-family: Poppies, sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 800;
     font-size: 50px;
 }
 
+.description{
+    font-size: 20px;
+    font-weight: 200;
+    font-family: Poppins, sans-serif;
+    margin-bottom: 5rem;
+}
 /*____ Footer ____*/
 .footer{
     display: flex;
@@ -165,7 +173,7 @@ h1{
 }
 
 .footer #logo{
-    width: 250px;
+    width: 200px;
     cursor: pointer;
 }
 
@@ -182,7 +190,7 @@ h1{
     font-size: 18px;
     color: #00E7EF;
     font-weight: 600;
-    font-family: Poppies, sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 
@@ -218,7 +226,7 @@ h1{
 
 .copyright p {
     font-size: 16px;
-    font-family: Poppies, sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 300;
 }
 
