@@ -140,6 +140,24 @@ h2{
     font-family: Poppies;
 }
 
+/* _______ styling COPY button */
+.copy-button {
+    background-color: #00E7EF;
+    color: #181818;
+    font-family: Poppies, sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.copy-button:hover {
+    background-color: #181818;
+    color: #00E7EF;
+}
+
 /*____ Footer ____*/
 .footer{
     display: flex;

@@ -1,3 +1,4 @@
+
 function generatePassword() {
     const length = parseInt(document.getElementById('length').value);
     const uppercase = document.getElementById('uppercase').checked;
@@ -23,4 +24,20 @@ function generatePassword() {
     }
 
     document.getElementById('result').innerText = password;
+
+
+    document.getElementById('copyButton').addEventListener('click', function() {
+        copyToClipboard('#result');
+    });
+
+}
+
+function copyToClipboard(text) {
+    let dummy = document.createElement("textarea");
+    dummy.value = document.querySelector(text).textContent;
+    document.body.appendChild(dummy);
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+    // alert('Password copied to clipboard!');
 }
