@@ -6,15 +6,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="/Web Static/styles.css">
     <style>
-        
-        form{
+        .form-cont{
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
-            width: 50%;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            width: 40%;
+            background-color: #181818;
+            border: 2px solid #00E7EF;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 231, 239, 1);
+            margin-bottom: 5rem;
+            font-family: Poppins, sans-serif;
+            padding: 3rem 0;
         }
+        form{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            height:1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #message{
+            height:3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        button {
+            height: 2rem;
+            background-color: #00E7EF;
+            color: #181818;
+            font-family: Poppies, sans-serif;
+            font-weight: 500;
+            overflow: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        
+        button:hover{
+            border: 1.5px solid #00E7EF;
+            color: #00E7EF;
+            background-color: #181818;
+        }
+
     </style>
 </head>
 <body>
@@ -42,20 +85,20 @@
         <p class="description">We value your feedback and are here to assist you with any questions or concerns<br>
              you may have. Please fill out the form below, and a member of our team will<br>
              get back to you as soon as possible.</p>
-        <div class="container">
+        <div class="form-cont">
             <form action="/submit-contact-form" method="POST" >
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="subject">Subject:</label>
                 <input type="text" id="subject" name="subject" required>
-                
+
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-                
+
                 <button type="submit">Send Message</button>
             </form>
         </div>
