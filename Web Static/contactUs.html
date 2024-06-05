@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Web Static/styles.css">
+    <style>
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <section class="header">
+        <img src="/img/1.png" alt="logo">
+        <nav class="header-menu">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Guide</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- MAIN -->
+    <section class="main">
+        <h1>Contact Us</h1>
+        <p class="description">We value your feedback and are here to assist you with any questions or concerns<br>
+             you may have. Please fill out the form below, and a member of our team will<br>
+             get back to you as soon as possible.</p>
+        <div class="container">
+            <form action="/submit-contact-form" method="POST" >
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <a href="#"><img src="/img/2.png" alt="logo" id="logo"></a>
+        <div class="footer-menu">
+            <div class="links">Support
+                <nav class="info">
+                    <a href="#"><i class='bx bx-chevron-right'></i>About Us</a>
+                    <a href="#"><i class='bx bx-chevron-right'></i>Contact Us</a>
+                </nav>
+            </div>
+            
+            <div class="links">Useful Links
+                <nav class="info">
+                    <a href="#"><i class='bx bx-chevron-right'></i>Privacy Policy</a>
+                    <a href="#"><i class='bx bx-chevron-right'></i>Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+    </section>
+    
+    <div class="copyright">
+        <p>Copyright © 2024 – All rights reserved. Powered by <a href="#">Locksmith Pro.</a></p>
+    </div>
+</body>
+</html>
