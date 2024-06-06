@@ -27,5 +27,11 @@ function generatePassword() {
     }
 
     document.getElementById('result').innerText = password;
+
+    // test to add copy botton
+    document.getElementById('copyButton').addEventListener('click', function() {
+        copyToClipboard('#result');
+    });
+
 }
 
