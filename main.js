@@ -1,6 +1,6 @@
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    document.querySelector('.nav-list').classList.toggle('active');
-});
+// document.getElementById('mobile-menu').addEventListener('click', function() {
+//     document.querySelector('.nav-list').classList.toggle('active');
+// });
 
 function generatePassword() {
     const length = parseInt(document.getElementById('length').value);
@@ -29,9 +29,16 @@ function generatePassword() {
     document.getElementById('result').innerText = password;
 
     // test to add copy botton
-    document.getElementById('copyButton').addEventListener('click', function() {
-        copyToClipboard('#result');
-    });
+    // document.getElementById('copyButton').addEventListener('click', function() {
+    //     copyToClipboard('#result');
+    // });
+
+    if (!document.getElementById('copyButton').hasAttribute('data-copied')) {
+        document.getElementById('copyButton').addEventListener('click', function() {
+            copyToClipboard('#result');
+        });
+        document.getElementById('copyButton').setAttribute('data-copied', 'true');
+    }
 
 }
 
