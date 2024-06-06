@@ -1,8 +1,8 @@
 let newPassword = "";
 
-// document.getElementById('mobile-menu').addEventListener('click', function() {
-//     document.querySelector('.nav-list').classList.toggle('active');
-// });
+document.getElementById('mobile-menu').addEventListener('click', function() {
+     document.querySelector('.nav-list').classList.toggle('active');
+});
 
 function generatePassword() {
     const length = parseInt(document.getElementById('length').value);

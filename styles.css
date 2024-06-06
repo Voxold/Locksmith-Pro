@@ -374,5 +374,14 @@ h1{
         font-size: 15px;
     }
 
+    .footer , .footer-menu{
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
 
+    .copyright{
+        text-align: center;
+        font-size: 15px;
+    }
   }
