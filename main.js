@@ -1,6 +1,4 @@
-// document.getElementById('mobile-menu').addEventListener('click', function() {
-//     document.querySelector('.nav-list').classList.toggle('active');
-// });
+let newPassword = "";
 
 function generatePassword() {
     const length = parseInt(document.getElementById('length').value);
@@ -27,29 +25,19 @@ function generatePassword() {
     }
 
     document.getElementById('result').innerText = password;
-
-    // test to add copy botton
-    // document.getElementById('copyButton').addEventListener('click', function() {
-    //     copyToClipboard('#result');
-    // });
-
-    if (!document.getElementById('copyButton').hasAttribute('data-copied')) {
-        document.getElementById('copyButton').addEventListener('click', function() {
-            copyToClipboard('#result');
-        });
-        document.getElementById('copyButton').setAttribute('data-copied', 'true');
-    }
-
+    newPassword = password;
+    return newPassword;
 }
 
-// function to copythe generated password
-
-function copyToClipboard(text) {
-    let dummy = document.createElement("textarea");
-    dummy.value = document.querySelector(text).textContent;
-    document.body.appendChild(dummy);
-    dummy.select();
-    document.execCommand("copy");
-    document.body.removeChild(dummy);
-    // alert('Password copied to clipboard!');
+function copyToClipboard() {
+    navigator.clipboard.writeText(newPassword).then(function() {
+        alert('Text copied to clipboard');
+    }).catch(function(err) {
+        console.error('Error in copying text: ', err);
+    });
 }
+
+// Assuming you want to attach the copyToClipboard function to a button click event
+// document.getElementById('copyButton').addEventListener('click', copyToClipboard);
+
+// document.getElementById('copyButton').addEventListener('click', copyToClipboard);
