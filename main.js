@@ -35,3 +35,14 @@ function generatePassword() {
 
 }
 
+// function to copythe generated password
+
+function copyToClipboard(text) {
+    let dummy = document.createElement("textarea");
+    dummy.value = document.querySelector(text).textContent;
+    document.body.appendChild(dummy);
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+    // alert('Password copied to clipboard!');
+}
