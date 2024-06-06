@@ -33,12 +33,19 @@
         <p class="description">Ensure your online security by avoiding password reuse.<br> 
             Generate a unique password for each account with our powerful random password generator.<br> 
             Keep your online identity safe-give it a try now!</p>
-        <form id="passwordForm">
+        <div id="passwordForm">
+            <!-- 
+            change the html tag from form to div to be able to use the copy botton without sending reqest to sever 
+             when using the copy botton in the form tag which in this case dealing with copy as a submitting botton to 
+             that form and send icluded data to the server >>>>>>
+             the problem solved when i changed the tag from "form" to "div" to keep the style and copy the generated password safely
+            -->
             <div class="generated-password">
                 <h2>Generated Password</h2>
                 <nav class="generated-password-nav">
                     <p id="result"></p>
                 </nav>
+                <button id="copyButton" class="copy-button" onclick="copyToClipboard()">Copy</button>
             </div>
             
             <nav class="choices">
@@ -71,7 +78,7 @@
             </nav>
 
             <button type="button" onclick="generatePassword()" class="button">Generate Password</button>
-        </form>
+        </div>
 
     </section>
 

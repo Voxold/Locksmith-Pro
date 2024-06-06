@@ -169,6 +169,27 @@ body {
     background-color: #181818;
 }
 
+#copyButton {
+    margin-top: 20px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #00E7EF;
+    color: #181818;
+    font-family: Poppies, sans-serif;
+    font-weight: 500;
+    overflow: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#copyButton:hover{
+    border: 1.5px solid #00E7EF;
+    color: #00E7EF;
+    background-color: #181818;
+}
+
 h1{
     font-family: Poppins, sans-serif;
     font-weight: 800;

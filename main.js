@@ -1,6 +1,8 @@
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    document.querySelector('.nav-list').classList.toggle('active');
-});
+let newPassword = "";
+
+// document.getElementById('mobile-menu').addEventListener('click', function() {
+//     document.querySelector('.nav-list').classList.toggle('active');
+// });
 
 function generatePassword() {
     const length = parseInt(document.getElementById('length').value);
@@ -24,25 +26,23 @@ function generatePassword() {
     for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * chars.length);
         password += chars[randomIndex];
+        
     }
 
     document.getElementById('result').innerText = password;
+    newPassword = password;
+    return newPassword;
 
-    // test to add copy botton
-    document.getElementById('copyButton').addEventListener('click', function() {
-        copyToClipboard('#result');
-    });
+    // document.getElementById('copyButton').addEventListener('click', function() {
+    //     copyToClipboard('#result');
+    // });
 
 }
 
-// function to copythe generated password
-
-function copyToClipboard(text) {
-    let dummy = document.createElement("textarea");
-    dummy.value = document.querySelector(text).textContent;
-    document.body.appendChild(dummy);
-    dummy.select();
-    document.execCommand("copy");
-    document.body.removeChild(dummy);
-    // alert('Password copied to clipboard!');
+function copyToClipboard() {
+    navigator.clipboard.writeText(newPassword).then(function() {
+        alert('Text copied to clipboard');
+    }).catch(function(err) {
+        console.error('Error in copying text: ', err);
+    });
 }
