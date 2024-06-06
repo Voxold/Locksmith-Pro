@@ -171,8 +171,8 @@ body {
 
 #copyButton {
     margin-top: 20px;
-    width: fit-content;
-    height: fit-content;
+    width: 80px;
+    height: 30px;
     background-color: #00E7EF;
     color: #181818;
     font-family: Poppies, sans-serif;
@@ -181,7 +181,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #copyButton:hover{
