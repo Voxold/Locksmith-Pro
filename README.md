@@ -66,9 +66,11 @@ Copyright (c) 2024 Locksmith Pro - <a href="https://github.com/Voxold/Locksmith-
 
 # Follow us at
 
-<h4>Share the project link with your network on social media</h4>
-
 ![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)
 ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
 ![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)
 
+<h4>Share the project link with your network on social media</h4>
+
+<a href=""></a>
+<box-icon type='logo' name='reddit'></box-icon>
