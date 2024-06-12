@@ -73,4 +73,4 @@ Copyright (c) 2024 Locksmith Pro - <a href="https://github.com/Voxold/Locksmith-
 <h4>Share the project link with your network on social media</h4>
 
 <a href=""></a>
-<box-icon type='logo' name='reddit'></box-icon>
+<box-icon type='logo' name='reddit' color="white"></box-icon>
