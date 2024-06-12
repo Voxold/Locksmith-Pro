@@ -61,11 +61,7 @@ After the password is generated, you can click the "Copy" button to copy the pas
 
 ## Proprietary Software License
 
-This software is proprietary and confidential, and its use is subject to the terms and conditions of this license agreement.<br>
-
-Copyright (c) 2024 Locksmith Pro<br>
-
-Permission is hereby granted to use this software for the intended purpose only. Modification, reverse engineering, decompilation, or redistribution of the software in any form, without the prior written consent of the copyright holder, is strictly prohibited.
+Copyright (c) 2024 Locksmith Pro - <a href="https://github.com/Voxold/Locksmith-Pro/blob/main/License">License</a>
 
 
 # Follow us at
