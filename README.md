@@ -72,6 +72,5 @@ Copyright (c) 2024 Locksmith Pro - <a href="https://github.com/Voxold/Locksmith-
 
 <h4>Share the project link with your network on social media</h4>
 
-<a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=telegram" /></a>
 
 
