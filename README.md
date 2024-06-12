@@ -59,7 +59,14 @@ After the password is generated, you can click the "Copy" button to copy the pas
     <a href="#"><img src="https://skillicons.dev/icons?i=photoshop" width='40px' height='40px'/></a>
 </a>
 
-## License
+## Proprietary Software License
+
+This software is proprietary and confidential, and its use is subject to the terms and conditions of this license agreement.<br>
+
+Copyright (c) 2024 Locksmith Pro<br>
+
+Permission is hereby granted to use this software for the intended purpose only. Modification, reverse engineering, decompilation, or redistribution of the software in any form, without the prior written consent of the copyright holder, is strictly prohibited.
+
 
 # Follow us at
 
