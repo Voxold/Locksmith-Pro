@@ -52,6 +52,12 @@ After the password is generated, you can click the "Copy" button to copy the pas
 </table>
 
 ## Technologies
+<a href="https://skillicons.dev">
+    <a href="#"><img src="https://skillicons.dev/icons?i=html" width='40px' height='40px'/></a>
+    <a href="#/"><img src="https://skillicons.dev/icons?i=css" width='40px' height='40px'/></a>
+    <a href="#"><img src="https://skillicons.dev/icons?i=javascript" width='40px' height='40px'/></a>
+    <a href="#"><img src="https://skillicons.dev/icons?i=photoshop" width='40px' height='40px'/></a>
+</a>
 
-HTML/CSS: For structuring the webpage and styling the user interface.
-JavaScript: To implement the password generation logic and handle user interactions.
+
+## License
