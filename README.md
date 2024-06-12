@@ -59,5 +59,8 @@ After the password is generated, you can click the "Copy" button to copy the pas
     <a href="#"><img src="https://skillicons.dev/icons?i=photoshop" width='40px' height='40px'/></a>
 </a>
 
-
 ## License
+
+# Follow us at
+
+<h4>Share the project link with your network on social media</h4>
