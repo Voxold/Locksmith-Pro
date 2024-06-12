@@ -64,7 +64,7 @@ After the password is generated, you can click the "Copy" button to copy the pas
 Copyright (c) 2024 Locksmith Pro - <a href="https://github.com/Voxold/Locksmith-Pro/blob/main/License">License</a>
 
 
-# Follow us at
+## Follow us at
 
 ![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)
 ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
