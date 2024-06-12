@@ -16,8 +16,14 @@ You will see four options for character types that you can include in your passw
     - Symbols: Check this box to include special characters (e.g., !, @, #, $) in your password.<br>
 
 <h6>Select Password Length:</h6>
+You will find an option to select the length of your password.<br>
+Choose a length between 5 (minimum) and 20 (maximum) characters using a slider or input box.
+
 <h6>Generate Password:</h6>
+Once you have selected the desired character types and length, click the "Generate" button. The website will create a password based on your selections.
+
 <h6>Copy Password:</h6>
+After the password is generated, you can click the "Copy" button to copy the password to your clipboard. This allows you to easily paste it into any required field.
 
 ## Team Members
 
