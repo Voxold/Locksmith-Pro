@@ -3,6 +3,7 @@
 Locksmith Pro is a powerful and intuitive password generation website designed to enhance user online security. With Locksmith Pro, users can create strong, random passwords that are virtually impossible to crack, ensuring the utmost protection for user sensitive accounts and data.
 
 ## Team Members
+
 <table>
     <tr>
         <th>❖ Bilal Ajaha</th>
