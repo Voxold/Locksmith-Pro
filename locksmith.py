@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, render_template
 
 
 app = Flask(__name__)
@@ -6,20 +6,20 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/home')
 def home():
-    return '<h1> Hello Locksmith </h1>'
+    return render_template('home.html')
 
 
 @app.route('/about')
 def home():
-    return '<h1> Hello Locksmith </h1>'
+    return render_template('about.html')
 
 @app.route('/contact')
 def home():
-    return '<h1> Contact us </h1>'
+    return render_template('contact.html')
 
 @app.route('/privacy-policy')
 def home():
-    return '<h1> Privacy policy </h1>'
+    return render_template('privacy-policy.html')
 
 
 if __name__ == '__main__':
