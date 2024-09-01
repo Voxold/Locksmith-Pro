@@ -17,7 +17,7 @@ def home():
 def home():
     return '<h1> Contact us </h1>'
 
-@app.route('/privacy')
+@app.route('/privacy-policy')
 def home():
     return '<h1> Privacy policy </h1>'
 
