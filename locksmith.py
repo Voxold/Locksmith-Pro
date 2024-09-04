@@ -10,15 +10,15 @@ def home():
 
 
 @app.route('/about')
-def home():
+def about():
     return render_template('about.html')
 
 @app.route('/contact')
-def home():
+def contact():
     return render_template('contact.html')
 
 @app.route('/privacy-policy')
-def home():
+def privacy():
     return render_template('privacy-policy.html')
 
 
