@@ -1,7 +1,9 @@
 from flask import Flask, redirect, render_template
-
+from forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = '790b5c87dfc1397fe22e4497bcef23f4'
 
 @app.route('/')
 @app.route('/home')
