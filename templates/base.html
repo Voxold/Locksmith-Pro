@@ -16,7 +16,8 @@
 <body>
     <!-- HEADER -->
     <section class="header">
-        <img src="../img/1.png" alt="logo">
+        <img src="{{ url_for('static', filename='img/1.png') }}" alt="logo">
+        <!-- <img src="../img/1.png" alt="logo"> -->
         <nav class="header-menu">
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -36,7 +37,8 @@
 
     <!-- FOOTER -->
     <section class="footer">
-        <a href="#"><img src="/img/2.png" alt="logo" id="logo"></a>
+        <img src="{{ url_for('static', filename='img/2.png') }}" alt="logo" id="logo">
+        <!-- <a href="#"><img src="/img/2.png" alt="logo" id="logo"></a> -->
         <div class="footer-menu">
             <div class="links">Support
                 <nav class="info">
@@ -58,7 +60,8 @@
         <p>Copyright © 2024 – All rights reserved. Powered by <a href="#">Locksmith Pro.</a></p>
     </div>
     
-    <script src="/main.js"></script>
+    <!-- <script src="/main.js"></script> -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     
 </body>
 </html>

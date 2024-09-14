@@ -196,7 +196,8 @@ h1{
     font-size: 50px;
 }
 
-.description{
+/* p .description{ */
+.description{    
     font-size: 20px;
     font-weight: 200;
     font-family: Poppins, sans-serif;
@@ -278,7 +279,80 @@ h1{
 .copyright p a:hover{
     color: #fff;
 }
+/* for About page */
+h2 {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    color: #fff; 
+}
+/* p {
+    color: #666;
+} */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+ul li {
+    margin-bottom: 10px;
+}
+.contact {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
 
+/* for Contact page */
+.form-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color: #181818;
+    border: 2px solid #00E7EF;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 231, 239, 1);
+    margin-bottom: 5rem;
+    font-family: Poppins, sans-serif;
+    padding: 3rem 0;
+}
+form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    height:1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#message{
+    height:3rem;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    height: 2rem;
+    background-color: #00E7EF;
+    color: #181818;
+    font-family: Poppies, sans-serif;
+    font-weight: 500;
+    overflow: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover{
+    border: 1.5px solid #00E7EF;
+    color: #00E7EF;
+    background-color: #181818;
+}
 
 
 /* ------------------  Mobile Version ------------------- */
