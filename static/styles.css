@@ -476,11 +476,18 @@ button:hover{
     background-color: #181818;
 }
 
+#login-registed-div {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #login-registed {
     color: #00E7EF;
-    margin-top: 2rem;
+    margin-top: 1rem;
     cursor: pointer;
     text-decoration: none;
+    font-size: 13px;
 }
 
 #login-registed:hover{
