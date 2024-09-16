@@ -27,6 +27,11 @@ def contact():
 def privacy():
     return render_template('privacy-policy.html', title='Privacy policy')
 
+# add terms Routing
+@app.route('/terms')
+def terms():
+    return render_template('')
+
 
 # Register Routing ##############################
 @app.route('/register',methods=['GET','POST'])
