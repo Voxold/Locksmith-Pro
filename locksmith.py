@@ -76,7 +76,7 @@ def dashboard():
 @app.route('/logout')
 def logout():
     session.pop('email',None)
-    return redirect('/login')
+    return redirect('/home')
 
 
 class User(db.Model):

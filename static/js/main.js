@@ -50,10 +50,22 @@ function generatePassword() {
 
 }
 
+// Copy Button
 function copyToClipboard() {
     navigator.clipboard.writeText(newPassword).then(function() {
         alert('Text copied to clipboard');
     }).catch(function(err) {
         console.error('Error in copying text: ', err);
     });
+}
+
+
+/* ______________ Dashboard Buttons __________________ */
+const userButtonsDiv = document.getElementById('user-btt');
+const dashboardDiv = document.getElementById('dashboard-btn');
+
+// Check if the current path is "/dashboard"
+if (window.location.pathname === '/dashboard') {
+    userButtonsDiv.style.display = 'none';  
+    dashboardDiv.style.display = 'flex'; 
 }

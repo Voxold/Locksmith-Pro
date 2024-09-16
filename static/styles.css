@@ -62,11 +62,12 @@ body {
 }
 
 /* User Buttons */ 
-#user-btt{
+#user-btt {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
+
 #user-btt button{
     overflow: hidden;
     outline: none;
@@ -100,6 +101,9 @@ body {
     border: solid 2px #00E7EF;
     color: black;
     transition: .4s;
+}
+.hidden {
+    display: none;
 }
 
 
@@ -447,6 +451,8 @@ button:hover{
 #login-registed:hover{
     color: #fff;
 }
+
+
 
 
 /* ________________________________________________________*/
