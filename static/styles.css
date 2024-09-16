@@ -58,6 +58,46 @@ body {
     display: inline;
 }
 
+/* User Buttons */ 
+#user-btt{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#user-btt button{
+    overflow: hidden;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    
+    font-family: Poppins, sans-serif;
+}
+
+#user-btt #bt1 {
+    background-color: #00E7EF;
+}
+
+#user-btt #bt2 {
+    background-color: transparent;
+    border: solid 2px #00E7EF;
+    color: #00E7EF;
+}
+
+#user-btt #bt1:hover {
+    background-color: transparent;
+    border: solid 1px #00E7EF;
+    color: #00E7EF;
+    transition: .4s;
+}
+
+#user-btt #bt2:hover {
+    background-color: #00E7EF;
+    border: solid 2px #00E7EF;
+    color: black;
+    transition: .4s;
+}
 
 /*____ Main ____*/
 .main{
