@@ -30,7 +30,7 @@ def privacy():
 # add terms Routing
 @app.route('/terms')
 def terms():
-    return render_template('')
+    return render_template('terms.html', title='Terms of Service')
 
 
 # Register Routing ##############################
