@@ -325,7 +325,7 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 1rem;
+    margin: 5rem 0 0 1rem;
     width: 90%;
 }
 

@@ -1,6 +1,6 @@
 from flask import Flask, request,render_template, redirect,session
 from flask_sqlalchemy import SQLAlchemy
-import bcrypt
+import bcrypt # bcrypt hash,hashing algorithm used to securely store passwords.
 
 
 app = Flask(__name__)
@@ -95,6 +95,12 @@ class User(db.Model):
 
 with app.app_context():
     db.create_all()
+
+# To See Who Users in database
+@app.route('/users')
+def users():
+    all_users = User.query.all()
+    return render_template('users.html', users = all_users)
 
 
 if __name__ == '__main__':
