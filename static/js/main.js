@@ -22,6 +22,15 @@ function generatePassword() {
         return;
     }
 
+    /* ---- Add if conditions for limit of characters */
+    if(length > 20) {
+        result.innerText = 'Please select a number under 20';
+        return;
+    }
+    if (length < 5) {
+        result.innerText = 'Please select a number above 5';
+        return;
+    }
 
 
     let password = '';
