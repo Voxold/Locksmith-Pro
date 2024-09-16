@@ -357,7 +357,9 @@ h1{
 .copyright p a:hover{
     color: #fff;
 }
-/* for About page */
+
+
+/*____________________ About _____________________*/
 h2 {
     font-family: Poppins, sans-serif;
     font-weight: 600;
@@ -379,8 +381,9 @@ ul li {
     font-size: 1.1em;
 }
 
-/* for Contact page */
-.form-cont{
+
+/*____________________ Forums _____________________*/
+.form-cont, .form-register, .form-login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -406,6 +409,8 @@ form{
 input {
     height:1.5rem;
     margin-bottom: 1.5rem;
+    border: none;
+    outline: none;
 }
 
 #message{
@@ -432,8 +437,20 @@ button:hover{
     background-color: #181818;
 }
 
+#login-registed {
+    color: #00E7EF;
+    margin-top: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+}
 
-/* ------------------  Mobile Version ------------------- */
+#login-registed:hover{
+    color: #fff;
+}
+
+
+/* ________________________________________________________*/
+/*____________________ Mobile Version _____________________*/
 /* Styles for mobile */
 .menu-toggle {
     display: none;
