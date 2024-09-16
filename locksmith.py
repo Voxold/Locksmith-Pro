@@ -1,6 +1,4 @@
 from flask import Flask, request,render_template, redirect,session
-from forms import RegistrationForm, LoginForm
-# Import SQL Alchemy
 from flask_sqlalchemy import SQLAlchemy
 import bcrypt
 
@@ -14,7 +12,7 @@ app.config['SECRET_KEY'] = '790b5c87dfc1397fe22e4497bcef23f4'
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', )
 
 
 @app.route('/about')
@@ -29,23 +27,6 @@ def contact():
 def privacy():
     return render_template('privacy-policy.html', title='Privacy policy')
 
-# User Routing ##############################
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(100), unique=True)
-    password = db.Column(db.String(100))
-
-    def __init__(self,email,password,name):
-        self.name = name
-        self.email = email
-        self.password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
-    
-    def check_password(self,password):
-        return bcrypt.checkpw(password.encode('utf-8'),self.password.encode('utf-8'))
-
-with app.app_context():
-    db.create_all()
 
 # Register Routing ##############################
 @app.route('/register',methods=['GET','POST'])
@@ -91,6 +72,24 @@ def dashboard():
 def logout():
     session.pop('email',None)
     return redirect('/login')
+
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), unique=True)
+    password = db.Column(db.String(100))
+
+    def __init__(self,email,password,name):
+        self.name = name
+        self.email = email
+        self.password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+    
+    def check_password(self,password):
+        return bcrypt.checkpw(password.encode('utf-8'),self.password.encode('utf-8'))
+
+with app.app_context():
+    db.create_all()
 
 
 if __name__ == '__main__':
