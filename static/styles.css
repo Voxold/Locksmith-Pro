@@ -61,8 +61,8 @@ body {
     display: inline;
 }
 
-/* User Buttons */ 
-#user-btt {
+/* ___ User Buttons __*/
+#user-btt, #dashboard-btn {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -75,7 +75,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     padding: 5px 10px;
-    
     font-family: Poppins, sans-serif;
 }
 
@@ -102,8 +101,44 @@ body {
     color: black;
     transition: .4s;
 }
-.hidden {
+
+/* ___ Dashboard Buttons __*/
+#dashboard-btn {
     display: none;
+}
+
+#dashboard-btn button{
+    overflow: hidden;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-family: Poppins, sans-serif;
+}
+
+#dashboard-btn #bt1 {
+    background-color: #00E7EF;
+}
+
+#dashboard-btn #bt2 {
+    background-color: transparent;
+    border: solid 2px #00E7EF;
+    color: #00E7EF;
+}
+
+#dashboard-btn #bt1:hover {
+    background-color: transparent;
+    border: solid 1px #00E7EF;
+    color: #00E7EF;
+    transition: .4s;
+}
+
+#dashboard-btn #bt2:hover {
+    background-color: #00E7EF;
+    border: solid 2px #00E7EF;
+    color: black;
+    transition: .4s;
 }
 
 
