@@ -19,12 +19,17 @@
                 <h2>Generated Password</h2>
                 <nav class="generated-password-nav">
                     <p id="result"></p>
-                </nav>
-                
+                </nav> 
+                     
                 <div id="buttons">
                     <button id="copyButton" class="copy-button" onclick="copyToClipboard()">Copy</button>
-                    <button id="saveButton" class="save-button save_password" type="submit">Save</button>
-                    
+                    <!-- Login Situation Buttons -->
+                    {% if session.logged_in %}
+                        <a href="/save" ><button id="saveButton">Save</button></a>
+                    <!-- Logout Situation Buttons -->
+                    {% else %}
+                        <a href="/login" ><button id="saveButton">Save</button></a>
+                    {% endif %}
                 </div>
             </div>
             
