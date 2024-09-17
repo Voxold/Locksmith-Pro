@@ -6,19 +6,31 @@
     <h2>user dashboard</h2>
     <p><b>Name: </b> {{user.name }}</p>
     <p><b>Email: </b> {{user.email }}</p>
-    <ul>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-        <li>hello</li>
-    </ul>
-
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Password Name</th>
+                <th>Associated Email</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for save in saves %}
+            <tr>
+                <td onclick="copy(this)">{{ save.password_name }}</td>
+                <td onclick="copy(this)">{{ save.password_email }}</td>
+                <td onclick="copy(this)">{{ save.password }}</td>
+                <td>
+                    <a href="/update/{{ save.id }}">Update</a>
+                    <br>
+                    <a href="/delete/{{ save.id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 {% endblock content %}

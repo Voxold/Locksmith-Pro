@@ -62,79 +62,35 @@ body {
 }
 
 /* ___ User Buttons __*/
-#user-btt, #dashboard-btn {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-#user-btt button{
+button{
     overflow: hidden;
     outline: none;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 5px 12px;
     font-family: Poppins, sans-serif;
+    margin: 0 0.3rem;
 }
 
-#user-btt #bt1 {
+#bt1 {
     background-color: #00E7EF;
 }
 
-#user-btt #bt2 {
+#bt2 {
     background-color: transparent;
     border: solid 2px #00E7EF;
     color: #00E7EF;
 }
 
-#user-btt #bt1:hover {
+#bt1:hover {
     background-color: transparent;
     border: solid 1px #00E7EF;
     color: #00E7EF;
     transition: .4s;
 }
 
-#user-btt #bt2:hover {
-    background-color: #00E7EF;
-    border: solid 2px #00E7EF;
-    color: black;
-    transition: .4s;
-}
-
-/* ___ Dashboard Buttons __*/
-#dashboard-btn {
-    display: none;
-}
-
-#dashboard-btn button{
-    overflow: hidden;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 5px 10px;
-    font-family: Poppins, sans-serif;
-}
-
-#dashboard-btn #bt1 {
-    background-color: #00E7EF;
-}
-
-#dashboard-btn #bt2 {
-    background-color: transparent;
-    border: solid 2px #00E7EF;
-    color: #00E7EF;
-}
-
-#dashboard-btn #bt1:hover {
-    background-color: transparent;
-    border: solid 1px #00E7EF;
-    color: #00E7EF;
-    transition: .4s;
-}
-
-#dashboard-btn #bt2:hover {
+#bt2:hover {
     background-color: #00E7EF;
     border: solid 2px #00E7EF;
     color: black;
@@ -318,6 +274,38 @@ h1{
     background-color: #181818;
 }
 
+/* __ Table Styling __ */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    font-family: Poppins, sans-serif;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  th {
+    background-color: #181818;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #373636;
+  }
+
+  tr:hover {
+    background-color: #313030;
+  }
+
+  caption {
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-weight: bold;
+  }
 
 
 /*____________________ Footer _____________________*/

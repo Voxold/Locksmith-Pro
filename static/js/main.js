@@ -60,7 +60,7 @@ function copyToClipboard() {
 }
 
 
-/* ______________ Dashboard Buttons __________________ */
+/* ______________ Dashboard Buttons __________________ 
 const userButtonsDiv = document.getElementById('user-btt');
 const dashboardDiv = document.getElementById('dashboard-btn');
 
@@ -68,4 +68,17 @@ const dashboardDiv = document.getElementById('dashboard-btn');
 if (window.location.pathname === '/dashboard') {
     userButtonsDiv.style.display = 'none';  
     dashboardDiv.style.display = 'flex'; 
+}*/
+
+/* ______________ Copy Informations with click __________________ */
+function copy(that){
+    var inp = document.createElement('input');  // Create a new input element
+    document.body.appendChild(inp);             // Append the input to the body
+    inp.value = that.textContent;               // Set the input's value to the textContent of the clicked element
+    inp.select();                               // Select the input field
+    document.execCommand('copy');               // Copy the selected text
+    inp.remove();                               // Remove the input field from the DOM
+    
+    // Optional: Notify the user
+    alert("Copied");
 }

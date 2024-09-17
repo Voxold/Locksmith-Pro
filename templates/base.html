@@ -31,19 +31,17 @@
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
-        </nav>
-        
-        <!-- Buttons of Auth system -->
-        <div class="user-buttons" id="user-btt">
-            <a href="/register"><button id="bt1" >Register</button></a>
-            <a href="/login"><button id="bt2" >Login</button></a>
-        </div>
+        </nav> 
 
-        <!-- Dashboard Buttons -->
-         <div id="dashboard-btn" class="hidden">
+        <!-- Login Situation Buttons -->
+        {% if session.logged_in %}
             <a href="/dashboard"><button id="bt1" >Dashboard</button></a>
             <a href="/logout" ><button id="bt2">Logout</button></a>
-         </div>
+        <!-- Logout Situation Buttons -->
+        {% else %}
+            <a href="/register"><button id="bt1" >Register</button></a>
+            <a href="/login"><button id="bt2" >Login</button></a>
+        {% endif %}
     
     </section>
 

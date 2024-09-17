@@ -1,6 +1,7 @@
-from flask import Flask, request,render_template, redirect,session, jsonify
+from flask import Flask, request,render_template, redirect,session, jsonify, url_for
 from config import app, db
 from models import User
+from models import SavedPassword
 
 
 
@@ -8,7 +9,7 @@ from models import User
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', )
+    return render_template('home.html')
 
 @app.route('/about')
 def about():
@@ -29,48 +30,96 @@ def terms():
 
 
 # Register Routing ############################## DONE
-@app.route('/register',methods=['GET','POST'])
+# @app.route('/register',methods=['GET','POST'])
+# def register():
+#     if request.method == 'POST':
+#         name = request.form['name']
+#         email = request.form['email']
+#         password = request.form['password']
+# 
+#         new_user = User(name=name,email=email,password=password)
+#         db.session.add(new_user)
+#         db.session.commit()
+#         return redirect('/login')
+#     return render_template('register.html')
+
+@app.route("/register", methods=["POST", "GET"])
 def register():
     if request.method == 'POST':
-        # handle request
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
-
-        new_user = User(name=name,email=email,password=password)
+        
+        # Check if the user already exists
+        user_exists = User.query.filter_by(email=email).first()
+        if user_exists:
+            return "User with this email already exists"
+        
+        # Create a new user
+        new_user = User(name=name, email=email, password=password)
         db.session.add(new_user)
         db.session.commit()
+
         return redirect('/login')
     return render_template('register.html')
 
 # Login Routing ############################## DONE
-@app.route('/login',methods=['GET','POST'])
+# @app.route('/login',methods=['GET','POST'])
+# def login():
+#     if request.method == 'POST':
+#         email = request.form['email']
+#         password = request.form['password']
+# 
+#         user = User.query.filter_by(email=email).first()
+#         
+#         if user and user.check_password(password):
+#             session['email'] = user.email
+#             return redirect('/dashboard')
+#         else:
+#             return render_template('login.html',error='Invalid user')
+#     return render_template('login.html')
+@app.route("/login", methods=["POST", "GET"])
 def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-
+        
+        # Find the user by email
         user = User.query.filter_by(email=email).first()
         
         if user and user.check_password(password):
+            # Set the user session and redirect to dashboard if the password is correct
+            session['user_id'] = user.id
             session['email'] = user.email
+            session['logged_in'] = True
             return redirect('/dashboard')
         else:
-            return render_template('login.html',error='Invalid user')
+            # Invalid email or password
+            return render_template('login.html', error="Invalid email or password")
     return render_template('login.html')
 
+
 # Dashboard Routing ############################## DONE
-@app.route('/dashboard')
+# @app.route('/dashboard')
+# def dashboard():
+#     if session['email']:
+#         user = User.query.filter_by(email=session['email']).first()
+#         return render_template('dashboard.html',user=user)
+#     return redirect('/login')
+@app.route("/dashboard")
 def dashboard():
-    if session['email']:
-        user = User.query.filter_by(email=session['email']).first()
-        return render_template('dashboard.html',user=user)
+    if session['user_id']:
+        user_id = session['user_id']
+        # Fetch all saved passwords for the logged-in user
+        saves = SavedPassword.query.filter_by(user_id=user_id).all()
+        return render_template('dashboard.html', saves=saves, user=user_id)
     return redirect('/login')
 
 # Logout Routing ############################## DONE
 @app.route('/logout')
 def logout():
     session.pop('email',None)
+    session.pop('logged_in',None)
     return redirect('/home')
 
 # Check Users in database | DONE
@@ -84,27 +133,29 @@ def users():
 """ !!!! Still Need Modifications !!!!"""
 
 # Save Password
-@app.route("/save-password", methods=["POST"])
+@app.route("/save", methods=["POST", "GET"])
 def save_password():
-    name = request.json.get("username")
-    email = request.json.get("email")
-    password = request.json.get("password")
-    type = request.json.get("type")
+    if request.method == 'POST':
+        # Check if the user is logged in
+        if 'user_id' in session:  
+            user_id = session['user_id']
+            password_name = request.form['name']
+            password_email = request.form['email']
+            password = request.form['password']
 
-    if not name or not email:
-        return (
-            jsonify({"message": "You must be registed"}),
-            400,
-        )
+            # Create a new SavedPassword entry
+            new_save = SavedPassword(password_name=password_name,
+                                     password_email=password_email,
+                                     password=password,
+                                     user_id=user_id)
+            db.session.add(new_save)
+            db.session.commit()
 
-    new_password = User(name=name, email=email, password=password, type=type)
-    try:
-        db.session.add(new_password)
-        db.session.commit()
-    except Exception as e:
-        return jsonify({"message": str(e)}), 400
-
-    return jsonify({"message": "Password Saved"}), 201
+            return redirect('/dashboard')
+        else:
+            return redirect('/login')  # If the user is not logged in, redirect to login
+    else:
+        return render_template('save.html')
 
 # Update Password
 @app.route("/update_password/<int:user_id>", methods=["PATCH"])
