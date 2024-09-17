@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="form-cont">
+    <form action="" method="POST">
+        <!-- we must add the below "hidden_tag" in any form for security reasons -->
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Join Today</legend>
+            <div>
+                {{ form.username.label}} {{ form.username() }} 
+            </div>
+            <div>
+                {{ form.email.label}} {{ form.email() }} 
+            </div>
+            <div>
+                {{ form.password.label}} {{ form.password() }} 
+            </div>
+            <div>
+                {{ form.confirm_password.label}} {{ form.confirm_password() }} 
+            </div>
+
+        </fieldset>
+        <div>
+            {{ form.submit() }} 
+        </div>
+
+    </form>
+    <div>
+        <small>
+            Already have an account? <a href="{{ url_for('login') }}"> Sign In </a>
+        </small>
+    </div>
+
+</div>
+
+{% endblock content %}
