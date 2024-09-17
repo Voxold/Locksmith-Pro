@@ -25,7 +25,7 @@
                     <button id="copyButton" class="copy-button" onclick="copyToClipboard()">Copy</button>
                     <!-- Login Situation Buttons -->
                     {% if session.logged_in %}
-                        <a href="/save" ><button id="saveButton">Save</button></a>
+                        <a href="/save" ><button id="saveButton" onclick="cutAndSave()" >Save</button></a>
                     <!-- Logout Situation Buttons -->
                     {% else %}
                         <a href="/login" ><button id="saveButton">Save</button></a>

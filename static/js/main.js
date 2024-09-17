@@ -70,7 +70,7 @@ if (window.location.pathname === '/dashboard') {
     dashboardDiv.style.display = 'flex'; 
 }*/
 
-/* ______________ Copy Informations with click __________________ */
+/* ______________ Copy Informations from dashboard __________________ */
 function copy(that){
     var inp = document.createElement('input');  // Create a new input element
     document.body.appendChild(inp);             // Append the input to the body
@@ -81,4 +81,22 @@ function copy(that){
     
     // Optional: Notify the user
     alert("Copied");
+}
+
+/* ______________ Copy password to Save input __________________ */
+// Get Value form /home
+function cutAndSave() {
+    var passwordText = document.getElementById('result').textContent;
+    localStorage.setItem('passwordValue', passwordText);
+    document.getElementById('result').textContent = "";
+    window.location.href = '/save';
+}
+
+// Put Value in /save
+window.onload = function() {
+    var savedPassword = localStorage.getItem('passwordValue');
+    if (savedPassword) {
+        document.getElementById('pwd').value = savedPassword;
+        localStorage.removeItem('passwordValue');
+    }
 }
