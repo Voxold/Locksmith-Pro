@@ -3,9 +3,9 @@
 {% block content %}
 
 <div class="container">
-    <h2>user dashboard</h2>
-    <p><b>Name: </b> {{user.name }}</p>
-    <p><b>Email: </b> {{user.email }}</p>
+    <h2>Welcome <span style="color: #00E7EF;">{{user.name}}</span> to your dashboard</h2>
+    <p><strong style="color: #00E7EF;" >Name: </strong> {{user.name }}</p>
+    <p><strong style="color: #00E7EF;" >Email: </strong> {{user.email }}</p>
     
     <table>
         <thead>
@@ -22,10 +22,9 @@
                 <td onclick="copy(this)">{{ save.password_name }}</td>
                 <td onclick="copy(this)">{{ save.password_email }}</td>
                 <td onclick="copy(this)">{{ save.password }}</td>
-                <td>
-                    <a href="/update/{{ save.id }}">Update</a>
-                    <br>
-                    <a href="/delete/{{ save.id }}">Delete</a>
+                <td id="u-d-btn">
+                    <a href="/update/{{ save.id }}" id="update-btn" >Update</a>
+                    <a href="/delete/{{ save.id }}" id="delete-btn" >Delete</a>
                 </td>
             </tr>
             {% endfor %}

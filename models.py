@@ -17,6 +17,9 @@ class User(db.Model):
     def check_password(self,password):
         # return bcrypt.checkpw(password.encode('utf-8'),self.password.encode('utf-8'))
         return password
+    
+    def __repr__(self,):
+        return self.password, self.email, self.name, self.id
 
 class SavedPassword(db.Model):
     id = db.Column(db.Integer, primary_key=True)

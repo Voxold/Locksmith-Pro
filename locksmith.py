@@ -110,9 +110,10 @@ def login():
 def dashboard():
     if session['user_id']:
         user_id = session['user_id']
+        user = User.query.filter_by(email=session['email']).first()
         # Fetch all saved passwords for the logged-in user
         saves = SavedPassword.query.filter_by(user_id=user_id).all()
-        return render_template('dashboard.html', saves=saves, user=user_id)
+        return render_template('dashboard.html', saves=saves, user=user)
     return redirect('/login')
 
 # Logout Routing ############################## DONE
@@ -159,20 +160,8 @@ def save_password():
 
 # Update Password
 @app.route("/update_password/<int:user_id>", methods=["PATCH"])
-def update_password(user_id):
-    myPassword = User.query.get(user_id)
-
-    if not myPassword:
-        return jsonify({"message": "Password not found!"}), 404
-
-    data = request.json
-    myPassword.name = data.get("Name", myPassword.name)
-    myPassword.email = data.get("email", myPassword.email)
-    myPassword.email = data.get("password", myPassword.password)
-
-    db.session.commit()
-
-    return jsonify({"message": "Password updated."}), 200
+def update_password():
+    return render_template('/dachboard')
 
 # Delete Password
 @app.route("/delete_password/<int:user_id>", methods=["DELETE"])

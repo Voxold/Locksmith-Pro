@@ -298,10 +298,6 @@ table {
     background-color: #373636;
   }
 
-  tr:hover {
-    background-color: #313030;
-  }
-
   caption {
     font-size: 1.5em;
     margin: 10px 0;
@@ -483,8 +479,47 @@ button:hover{
     color: #fff;
 }
 
+/*____________________ Update & Delete Forums _____________________*/
+#u-d-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 
+#u-d-btn a {
+    text-decoration: none;
+}
 
+#update-btn, #delete-btn  {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#update-btn {
+    background-color: greenyellow;
+    color: #181818;
+}
+
+#update-btn:hover {
+    background-color: rgb(146, 216, 40);
+    color: black;
+}
+
+#delete-btn {
+    background-color: red;
+    color: #181818;
+}
+
+#delete-btn:hover {
+    background-color: rgb(201, 5, 5);
+    color: black;
+}
+
+p {
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+}
 
 /* ________________________________________________________*/
 /*____________________ Mobile Version _____________________*/
