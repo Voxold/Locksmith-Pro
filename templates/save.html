@@ -3,18 +3,19 @@
 {% block content %}
 
 <h1>Save Your Password</h1>
+<div class="form-login">
+    <form action="/save" method="POST" >
+        <label for="Name">Name:</label>
+        <input type="text" id="name" placeholder="Enter name" name="name">
 
-<form action="/save" method="POST">
-    <label for="Name">Name:</label>
-    <input type="text" id="name" placeholder="Enter name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter email" name="email">
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" placeholder="Enter email" name="email">
-               
-    <label for="pwd">Password:</label>
-    <input type="password" id="pwd" placeholder="Enter password" name="password">
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" placeholder="Enter password" name="password">
 
-    <button type="submit">Update Password</button>
-</form>
+        <button type="submit">Save Password</button>
+    </form>
+</div>
 
 {% endblock content %}
