@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    background-image: url(/Locksmith-Pro/static/img/background.png);
+    background-image: url("/static/img/background.png");
 }
 
 
