@@ -9,9 +9,12 @@
     {% else %}
         <title>Locksmith Pro</title>
     {% endif %}
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    {% block head %}
+    <!-- This block can be overridden in child templates -->
+    {% endblock %}
 </head>
 <body>
     

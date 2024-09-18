@@ -26,15 +26,10 @@
                     <td onclick="copy(this)" >{{ save.password_email }}</td>
                     <td onclick="copy(this)" >{{ save.password }}</td>
                     <td id="u-d-btn">
-
-                        <form action="{{ url_for('update', id=save.id) }}" method="POST">
-                            <button type="submit" id="update">Update</button>
-                        </form>
-
+                        <a href="/update/{{ save.id }}"><button>Update</button></a>
                         <form action="{{ url_for('delete', id=save.id) }}" method="POST">
                             <button type="submit" id="delete">Delete</button>
                         </form>
-
                     </td>
                 </tr>
                 {% endfor %}

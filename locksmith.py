@@ -159,21 +159,23 @@ def save_password():
         return render_template('save.html')
 
 # Update Password | 
-@app.route("/update/<int:id>", methods=["POST"])
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
-    if request.method == 'POST':
-        password_name = request.form['password_name']
-        password_email = request.form['password_email']
-        password = request.form['password']
+    update = SavedPassword.query.get(id)
 
-    # Create a new SavedPassword entry
-        new_save = SavedPassword(password_name=password_name,
-                                password_email=password_email,
-                                password=password,
-                                user_id=id)
-        db.session.add(new_save)
-        db.session.commit()
-        return redirect('/dashboard')
+    if request.method == 'POST':
+        # Handle form data
+        update.password_name = request.form.get('name')
+        update.password_email = request.form.get('email')
+        update.password = request.form.get('password')
+
+        try:
+            db.session.commit()
+            return redirect('/dashboard')
+        except Exception as e:
+            return "There was a problem updating the password"
+    else:
+        return render_template('update.html', update=update)
 
 # Delete Password | DONE
 @app.route("/delete/<int:id>", methods=["POST"])

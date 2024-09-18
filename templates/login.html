@@ -13,13 +13,14 @@
         <label for="pwd">Password:</label>
         <input type="password" id="pwd" placeholder="Enter password" name="password">
 
-        <button type="submit" id="submit-bt">Submit</button>
+        <button type="submit" id="submit-bt">Login</button>
 
         <div id="login-registed-div">
             <a href="/register" id="login-registed">Reset Password</a>
             <a href="/register" id="login-registed">Register</a>
         </div>
         
+        <p style="color: red; text-align:center;">{{error}}</p>
     </form>
 </div>
 

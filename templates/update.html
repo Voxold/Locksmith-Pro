@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Update Password: {{ update.password_name }}
+{% endblock %}
+
+{% block content %}
+<h1>Update Password Informations</h1>
+<div class="form-login">
+    <form action="/update/{{ update.id }}" method="POST">
+        <label for="name">Password Name:</label>
+        <input type="text" id="name" name="name" value="{{ update.password_name }}" required>
+        
+        <label for="email">Password Email:</label>
+        <input type="email" id="email" name="email" value="{{ update.password_email }}" required>
+        
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" value="{{ update.password }}" required>
+        
+        <button type="submit">Update Password</button>
+    </form>
+</div>
+
+{% endblock content %}

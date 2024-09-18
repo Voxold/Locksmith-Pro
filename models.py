@@ -12,11 +12,13 @@ class User(db.Model):
         self.name = name
         self.email = email
         self.password = password
-        #self.password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+        # self.password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
     
     def check_password(self,password):
         # return bcrypt.checkpw(password.encode('utf-8'),self.password.encode('utf-8'))
-        return password
+        if password == self.password:
+            return True
+        return False
     
     def __repr__(self,):
         return self.password, self.email, self.name, self.id
