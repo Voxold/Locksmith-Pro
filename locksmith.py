@@ -1,4 +1,4 @@
-from flask import Flask, request,render_template, redirect,session, jsonify, url_for
+from flask import Flask, request, render_template, redirect, jsonify, session
 from config import app, db
 from models import User
 from models import SavedPassword
@@ -53,7 +53,8 @@ def register():
         # Check if the user already exists
         user_exists = User.query.filter_by(email=email).first()
         if user_exists:
-            return "User with this email already exists"
+            user_message = "User with this email already exists"
+            return render_template('register.html', data=user_message)
         
         # Create a new user
         new_user = User(name=name, email=email, password=password)
@@ -130,10 +131,9 @@ def users():
     return render_template('users.html', users = all_users)
 
 
-# Dashboard ############################## In Progress
-""" !!!! Still Need Modifications !!!!"""
+# Dashboard Elements ############################## Progrissing
 
-# Save Password
+# Save Password | DONE
 @app.route("/save", methods=["POST", "GET"])
 def save_password():
     if request.method == 'POST':
@@ -158,24 +158,41 @@ def save_password():
     else:
         return render_template('save.html')
 
-# Update Password
-@app.route("/update_password/<int:user_id>", methods=["PATCH"])
-def update_password():
-    return render_template('/dachboard')
+# Update Password | 
+@app.route("/update/<int:id>", methods=["POST"])
+def update(id):
+    if request.method == 'POST':
+        password_name = request.form['password_name']
+        password_email = request.form['password_email']
+        password = request.form['password']
 
-# Delete Password
-@app.route("/delete_password/<int:user_id>", methods=["DELETE"])
-def delete_password(user_id):
-    myPassword = User.query.get(user_id)
+    # Create a new SavedPassword entry
+        new_save = SavedPassword(password_name=password_name,
+                                password_email=password_email,
+                                password=password,
+                                user_id=id)
+        db.session.add(new_save)
+        db.session.commit()
+        return redirect('/dashboard')
 
-    if not myPassword:
-        return jsonify({"message": "Password not found"}), 404
-
+# Delete Password | DONE
+@app.route("/delete/<int:id>", methods=["POST"])
+def delete(id):
+    myPassword = SavedPassword.query.get(id)
     db.session.delete(myPassword)
     db.session.commit()
+    return redirect('/dashboard')
 
-    return jsonify({"message": "Password deleted!"}), 200
-
+# Delete Users | DONE
+@app.route('/delete-user/<int:id>', methods=["POST"])
+def delete_user(id):
+    user_to_delete = User.query.get_or_404(id)
+    if user_to_delete:
+        db.session.delete(user_to_delete)
+        db.session.commit()
+        return redirect('/users')
+    else:
+        return "User not found."
 
 
 with app.app_context():

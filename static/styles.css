@@ -277,7 +277,7 @@ h1{
 
 /* __ Table Styling __ */
 table {
-    width: 70%;
+    width: 100%;
     border-collapse: collapse;
     font-family: Poppins, sans-serif;
   }

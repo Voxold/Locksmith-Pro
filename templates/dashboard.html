@@ -7,29 +7,40 @@
     <p><strong style="color: #00E7EF;" >Name: </strong> {{user.name }}</p>
     <p><strong style="color: #00E7EF;" >Email: </strong> {{user.email }}</p>
     
-    <table>
-        <thead>
-            <tr>
-                <th>Password Name</th>
-                <th>Associated Email</th>
-                <th>Password</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for save in saves %}
-            <tr>
-                <td onclick="copy(this)">{{ save.password_name }}</td>
-                <td onclick="copy(this)">{{ save.password_email }}</td>
-                <td onclick="copy(this)">{{ save.password }}</td>
-                <td id="u-d-btn">
-                    <a href="/update/{{ save.id }}" id="update-btn" >Update</a>
-                    <a href="/delete/{{ save.id }}" id="delete-btn" >Delete</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% if saves|length < 1 %}
+        <p><strong style="color: red; text-align:center;" >There's no password saved!</strong></p>
+    {% else %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Password Name</th>
+                    <th>Associated Email</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for save in saves %}
+                <tr>
+                    <td onclick="copy(this)" >{{ save.password_name }}</td>
+                    <td onclick="copy(this)" >{{ save.password_email }}</td>
+                    <td onclick="copy(this)" >{{ save.password }}</td>
+                    <td id="u-d-btn">
+
+                        <form action="{{ url_for('update', id=save.id) }}" method="POST">
+                            <button type="submit" id="update">Update</button>
+                        </form>
+
+                        <form action="{{ url_for('delete', id=save.id) }}" method="POST">
+                            <button type="submit" id="delete">Delete</button>
+                        </form>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
 </div>
 
 {% endblock content %}
