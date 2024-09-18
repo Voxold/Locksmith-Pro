@@ -56,6 +56,8 @@ After the password is generated, you can click the "Copy" button to copy the pas
     <a href="#"><img src="https://skillicons.dev/icons?i=html" width='40px' height='40px'/></a>
     <a href="#/"><img src="https://skillicons.dev/icons?i=css" width='40px' height='40px'/></a>
     <a href="#"><img src="https://skillicons.dev/icons?i=javascript" width='40px' height='40px'/></a>
+    <a href="#"><img src="https://skillicons.dev/icons?i=python" width='40px' height='40px'/></a>
+    <a href="#"><img src="https://skillicons.dev/icons?i=flask" width='40px' height='40px'/></a>
     <a href="#"><img src="https://skillicons.dev/icons?i=photoshop" width='40px' height='40px'/></a>
 </a>
 
