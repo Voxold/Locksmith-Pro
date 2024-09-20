@@ -1,4 +1,5 @@
-from flask import Flask, request, render_template, redirect, jsonify, session
+from flask import Flask, request, render_template, redirect, jsonify, session, flash
+
 from config import app, db
 from models import User
 from models import SavedPassword
