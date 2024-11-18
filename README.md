@@ -29,7 +29,8 @@ Locksmith Pro is a powerful and intuitive password generation website designed t
 
 ## Technologies
 
-HTML/CSS: For structuring the webpage and styling the user interface.
-Hello World
+HTML/CSS/Bootstrap: For frontent.
+Flask: for server side and api
+
 
 JavaScript: To implement the password generation logic and handle user interactions.
